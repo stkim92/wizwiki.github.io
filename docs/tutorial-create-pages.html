@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create Pages · Test Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this section, we will learn about creating two types of pages in Docusaurus: a regular page and a documentation page."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create Pages · Test Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/stkim92/wizwiki.github.io.git/test-site/"/><meta property="og:description" content="In this section, we will learn about creating two types of pages in Docusaurus: a regular page and a documentation page."/><meta property="og:image" content="https://github.com/stkim92/wizwiki.github.io.git/test-site/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/stkim92/wizwiki.github.io.git/test-site/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/test-site/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://github.com/stkim92/wizwiki.github.io.git/test-site/blog/atom.xml" title="Test Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://github.com/stkim92/wizwiki.github.io.git/test-site/blog/feed.xml" title="Test Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/test-site/js/scrollSpy.js"></script><link rel="stylesheet" href="/test-site/css/main.css"/><script src="/test-site/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/test-site/"><img class="logo" src="/test-site/img/favicon.ico" alt="Test Site"/><h2 class="headerTitleWithLogo">Test Site</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/test-site/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/test-site/docs/doc4" target="_self">API</a></li><li class=""><a href="/test-site/help" target="_self">Help</a></li><li class=""><a href="/test-site/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Create Pages</h1></header><article><div><span><p>In this section, we will learn about creating two types of pages in Docusaurus: a regular page and a documentation page.</p>
+<p><img alt="Docusaurus MacBook" src="/img/undraw_docusaurus_tree.svg" class="docImage"/></p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-regular-page"></a><a href="#create-a-regular-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Regular Page</h2>
+<ol>
+<li>In the <code>website/pages/en</code> directory of your repository, save a text file called <code>hello-world.js</code> with the following contents:</li>
+</ol>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
+
+<span class="hljs-keyword">const</span> CompLibrary = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../../core/CompLibrary.js'</span>);
+
+<span class="hljs-keyword">const</span> Container = CompLibrary.Container;
+<span class="hljs-keyword">const</span> GridBlock = CompLibrary.GridBlock;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HelloWorld</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"docMainWrapper wrapper"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Container</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mainContainer documentContainer postContainer"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is my first page!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Container</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-built_in">module</span>.exports = HelloWorld;
+</code></pre>
+<blockquote>
+<p>Use any text editor to make the file, such as <a href="https://code.visualstudio.com/download">Microsoft Visual Studio Code</a> or <a href="https://www.activestate.com/komodo-edit">Komodo Edit</a>.</p>
+</blockquote>
+<ol start="2">
+<li>Go to <a href="http://localhost:3000/hello-world">http://localhost:3000/hello-world</a> and you should be able to see the new page.</li>
+<li>Change the text within the <code>&lt;p&gt;...&lt;/p&gt;</code> to &quot;I can write JSX here!&quot; and save the file again. The browser should refresh automatically to reflect the change.</li>
+</ol>
+<pre><code class="hljs css language-diff"><span class="hljs-deletion">- &lt;p&gt;This is my first page!&lt;/p&gt;</span>
+<span class="hljs-addition">+ &lt;p&gt;I can write JSX here!&lt;/p&gt;</span>
+</code></pre>
+<p>React is being used as a templating engine for rendering static markup. You can leverage on the expressibility of React to build rich web content. Learn more about creating pages <a href="custom-pages">here</a>.</p>
+<p><img alt="Docusaurus React" src="/img/undraw_docusaurus_react.svg" class="docImage"/></p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-documentation-page"></a><a href="#create-a-documentation-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Documentation Page</h2>
+<ol>
+<li>Create a new file in the <code>docs</code> folder called <code>doc9.md</code>. The <code>docs</code> folder is in the root of your Docusaurus project, one level above <code>website</code>.</li>
+<li>Paste the following contents:</li>
+</ol>
+<pre><code class="hljs">---
+id: doc9
+<span class="hljs-section">title: This is Doc 9
+---</span>
+
+I can write content using [<span class="hljs-string">GitHub-flavored Markdown syntax</span>](<span class="hljs-link">https://github.github.com/gfm/</span>).
+
+<span class="hljs-section">## Markdown Syntax</span>
+
+<span class="hljs-strong">**Bold**</span> <span class="hljs-emphasis">_italic_</span> <span class="hljs-code">`code`</span> [<span class="hljs-string">Links</span>](<span class="hljs-link">#url</span>)
+
+<span class="hljs-quote">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span>
+<span class="hljs-quote">&gt; id sem consectetuer libero luctus adipiscing.</span>
+<span class="hljs-bullet">
+* </span>Hey
+<span class="hljs-bullet">* </span>Ho
+<span class="hljs-bullet">* </span>Let's Go
+</code></pre>
+<ol start="3">
+<li>The <code>sidebars.json</code> is where you specify the order of your documentation pages, so open <code>website/sidebars.json</code> and add <code>&quot;doc9&quot;</code> after <code>&quot;doc1&quot;</code>. This ID should be the same one as in the metadata for the Markdown file above, so if you gave a different ID in Step 2, just make sure to use the same ID in the sidebar file.</li>
+</ol>
+<pre><code class="hljs css language-diff">{
+  "docs": {
+    "Docusaurus": [
+      "doc1",
+<span class="hljs-addition">+     "doc9"</span>
+    ],
+    "First Category": ["doc2"],
+    "Second Category": ["doc3"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
+</code></pre>
+<ol start="4">
+<li>A server restart is needed to pick up sidebar changes, so go to your terminal, kill your dev server (<kbd>Cmd</kbd> + <kbd>C</kbd> or <kbd>Ctrl</kbd> + <kbd>C</kbd>), and run <code>npm start</code> or <code>yarn start</code>.</li>
+<li>Navigate to <a href="http://localhost:3000/docs/doc9">http://localhost:3000/docs/doc9</a> to see the new documentation page.</li>
+</ol>
+<p>You've created your first documentation page on Docusaurus!</p>
+<p>Learn more about creating docs pages <a href="navigation">here</a>.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-regular-page">Create a Regular Page</a></li><li><a href="#create-a-documentation-page">Create a Documentation Page</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/test-site/" class="nav-home"><img src="/test-site/img/favicon.ico" alt="Test Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/test-site/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/test-site/docs/en/doc2.html">Guides (or other categories)</a><a href="/test-site/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/test-site/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/test-site/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/test-site/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>
