@@ -28,11 +28,11 @@ languages.js
 <p>Pages with text that you want translated should be placed in <code>website/pages/en</code> directory.</p>
 <p>Wrap strings you want translated in a <code>&lt;translate&gt;</code> tag, and add the following <code>require</code> statement to the top of the file:</p>
 <pre><code class="hljs css language-jsx">...
-const translate = require('../../server/translate.js').translate;
+const translate = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../../server/translate.js'</span>).translate;
 ...
 &lt;h2&gt;
-  &lt;translate&gt;This header will be translated&lt;/translate&gt;
-&lt;/h2&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">translate</span>&gt;</span>This header will be translated<span class="hljs-tag">&lt;/<span class="hljs-name">translate</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>
 ...
 </code></pre>
 <p>You can also include an optional description attribute to give more context to a translator about how to translate the string:</p>

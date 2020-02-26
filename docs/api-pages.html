@@ -144,15 +144,15 @@ MyPage.description = <span class="hljs-string">'My Custom Description'</span>;
 <p>When translations are enabled, any pages inside <code>website/pages/en</code> will be translated for all enabled languages. URLs for non-English pages will use their language tags as specified in the <code>languages.js</code> file. E.g. The URL for a French page of <code>website/pages/en/help.js</code> would be found at <code>${baseUrl}fr/help.html</code>.</p>
 <p>When writing pages that you wish to translate, wrap any strings to be translated inside a <code>&lt;translate&gt;</code> tag. e.g.,</p>
 <pre><code class="hljs css language-jsx">&lt;p&gt;
-  &lt;translate&gt;I like translations&lt;/translate&gt;
-&lt;/p&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">translate</span>&gt;</span>I like translations<span class="hljs-tag">&lt;/<span class="hljs-name">translate</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 </code></pre>
 <p>You can also provide an optional description attribute to provide context for translators. e.g,</p>
-<pre><code class="hljs css language-jsx">&lt;a href="/community"&gt;
-  &lt;translate desc="Footer link to page referring to community GitHub and Slack"&gt;
+<pre><code class="hljs css language-jsx">&lt;a href=<span class="hljs-string">"/community"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">translate</span> <span class="hljs-attr">desc</span>=<span class="hljs-string">"Footer link to page referring to community GitHub and Slack"</span>&gt;</span>
     Community
-  &lt;/translate&gt;
-&lt;/a&gt;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">translate</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
 </code></pre>
 <p>Add the following require statement as well:</p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> translate = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../../server/translate.js'</span>).translate;
